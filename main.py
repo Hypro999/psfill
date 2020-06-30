@@ -1,6 +1,7 @@
 import os
 import json
 import requests
+import argparse
 from bs4 import BeautifulSoup  # type: ignore 
 from typing import Any, Dict, List, Set, Tuple
 from urllib.parse import quote as url_encode
@@ -121,6 +122,24 @@ def load_stations(session: requests.Session) -> Dict[str, Any]:
     print("Success.")
     return stations_data
 
+def generate_station_list(session: requests.Session) ->None: 
+    print("Generating the updated PS list.. ",end = "", flush = True)
+    stations_data_endpoint = url("/Student/StudentStationPreference.aspx/getinfoStation")
+    response = session.post(stations_data_endpoint, json={"CompanyId": "0"})  # We have to send a POST request to get data.... Ok, seriously, which IDIOT designed this portal?!
+    if response.status_code != 200:
+        print("Failed.")
+        exit(1)
+    stations_list = json.loads(response.json()["d"])
+    company_list = []
+    for station in stations_list: 
+        company_list.append(station["Companyname"].strip())
+    
+    print("Overwriting the previous stations.txt file..")
+    with open("stations.txt", "w") as f:
+        for company in company_list: 
+            f.write(company+'\n')
+
+
 def load_user_station_preferences(stations_data: Dict[str, Any]) -> List[str]:
     """ This method will also validate the user station preferences. """
     print("Loading user station preferences... ", end="", flush=True)
@@ -193,9 +212,15 @@ def send_station_preferences(session: requests.Session, stations_data: Dict[str,
     return
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-g","--generate",help = "generate new station list",action = "store_true")
+    args = parser.parse_args()
     session = requests.Session()
     txtemail, txtpass, acco = load_user_credentials()
     authenticate(session, txtemail, txtpass)
+    if args.generate:
+        generate_station_list(session)
+        exit(0)
     stations_data = load_stations(session)
     user_station_preferences = load_user_station_preferences(stations_data)
     send_station_preferences(session, stations_data, user_station_preferences, acco)
