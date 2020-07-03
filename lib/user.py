@@ -1,5 +1,5 @@
 from os.path import exists
-from settings import CREDENTIALS_FILE, STATIONS_FILE
+from settings import CREDENTIALS_FILE, FAVORITE_STATIONS_FILE, STATIONS_FILE
 from typing import Any, Dict, List, Set, Tuple
 
 def load_user_credentials() -> Tuple[str, str, Set[str]]:
@@ -81,6 +81,26 @@ def load_user_station_preferences(stations_data: Dict[str, Any]) -> List[str]:
         print("Failed.\nStations that you have to add to {}:\n{}".format(STATIONS_FILE, set(stations_data) - set(validated_user_station_preferences)))
         exit(1)
 
+    x = set(stations_data)
+    y = set(validated_user_station_preferences)
+    assert(len(x - y) == len(y - x) == 0)  # This might degrade the user experience and should be removed later if more people actually use this thing.
+
     print("Success.")
     return validated_user_station_preferences
+
+def load_user_favorite_stations() -> List[str]:
+    print("Loading favorite stations... ", end="", flush=True)
+
+    if not exists(FAVORITE_STATIONS_FILE):
+        print("Failed.\n{} does not exist.".format(FAVORITE_STATIONS_FILE))
+
+    with open(FAVORITE_STATIONS_FILE, "r") as f:
+        favorite_stations = [stationtext.strip() for stationtext in f.readlines()]
+        # This function is intended to be used with hypergen. So we don't need to check if these
+        # stations are valid or not. hypergen will just create the stations.txt file. Validation
+        # will be handled by load_user_station_preferences when we load the stations file before
+        # using it to send the ultimate preferred order.
+    
+    print("Success.")
+    return favorite_stations
 
