@@ -1,6 +1,6 @@
 *.swp
 *.vscode
-credentials.txt
 __pycache__/
 .mypy_cache/
+.config/
 
