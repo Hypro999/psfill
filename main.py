@@ -7,20 +7,21 @@ from typing import Any, Dict, List, Set, Tuple
 from urllib.parse import quote as url_encode
 
 ROOT_URL = "http://psd.bits-pilani.ac.in"
+STATIONS_FILE = "stations.txt"
+CREDENTIALS_FILE = "credentials.txt"
 
 def url(endpoint: str) -> str:
     return ROOT_URL + endpoint
 
 def load_user_credentials() -> Tuple[str, str, Set[str]]:
     print("Loading user credentials... ", end="", flush=True)
-    credentials_file = "credentials.txt"
 
-    if not os.path.exists(credentials_file):
-        print("Failure.\nCredentials file ({}) not found.".format(credentials_file))
+    if not os.path.exists(CREDENTIALS_FILE):
+        print("Failure.\nCredentials file ({}) not found.".format(CREDENTIALS_FILE))
         exit(1)
     
     data = []  # Sort of like a variable declaration
-    with open(credentials_file, "r") as f:
+    with open(CREDENTIALS_FILE, "r") as f:
         data = f.readlines()
 
     txtemail = ""
@@ -42,7 +43,7 @@ def load_user_credentials() -> Tuple[str, str, Set[str]]:
             # Skip lines which are purely whitespace.
             line = line.strip()
             if line != "":
-                print("Failure.\nLine number {} in {} is invalid:\n{}".format(i, credentials_file, line))
+                print("Failure.\nLine number {} in {} is invalid:\n{}".format(i, CREDENTIALS_FILE, line))
                 exit(1)
 
     if txtemail == "":
@@ -123,7 +124,17 @@ def load_stations(session: requests.Session) -> Dict[str, Any]:
     return stations_data
 
 def generate_station_list(session: requests.Session) ->None: 
-    print("Generating the updated PS list.. ",end = "", flush = True)
+    output_filename = STATIONS_FILE
+    while os.path.exists(output_filename):
+        opt = "c"
+        while opt not in ["y", "n"]:
+            opt = input("The file {} already exists. Overwrite (y/n)? ".format(output_filename))
+        if opt == "y":
+            output_filename = input("Then what file do you want to write to? ")
+        elif opt == "n":
+            exit(0)
+
+    print("Generating the updated PS list... ",end = "", flush = True)
     stations_data_endpoint = url("/Student/StudentStationPreference.aspx/getinfoStation")
     response = session.post(stations_data_endpoint, json={"CompanyId": "0"})  # We have to send a POST request to get data.... Ok, seriously, which IDIOT designed this portal?!
     if response.status_code != 200:
@@ -134,23 +145,23 @@ def generate_station_list(session: requests.Session) ->None:
     for station in stations_list: 
         company_list.append(station["Companyname"].strip())
     
-    print("Overwriting the previous stations.txt file..")
-    with open("stations.txt", "w") as f:
+    with open(output_filename, "w+") as f:
         for company in company_list: 
             f.write(company+'\n')
 
+    print("Success.")
+    return
 
 def load_user_station_preferences(stations_data: Dict[str, Any]) -> List[str]:
     """ This method will also validate the user station preferences. """
     print("Loading user station preferences... ", end="", flush=True)
-    stations_file = "stations.txt"
 
-    if not os.path.exists(stations_file):
-        print("Failure.\nStations Preferences file ({}) not found.".format(stations_file))
+    if not os.path.exists(STATIONS_FILE):
+        print("Failure.\nStations Preferences file ({}) not found.".format(STATIONS_FILE))
         exit(1)
    
     user_station_preferences = []  # type: List[str]
-    with open(stations_file, "r") as f:
+    with open(STATIONS_FILE, "r") as f:
         user_station_preferences = f.readlines()
 
     # Some lines might be a random mixture of whitespace so we can't
@@ -164,16 +175,16 @@ def load_user_station_preferences(stations_data: Dict[str, Any]) -> List[str]:
         if station == "":
             continue  # This is how we filter out blank lines.
         if station not in stations_data:
-            print("Failed.\nStation \"{}\" on line {} of {} is not a valid station.".format(station, i, stations_file))
+            print("Failed.\nStation \"{}\" on line {} of {} is not a valid station.".format(station, i, STATIONS_FILE))
             exit(1)
         if station in stations_seen:
-            print("Failed.\nStation \"{}\" was originally on line {} of {} but was repeated on line {}.".format(station, stations_seen[station], stations_file, i))
+            print("Failed.\nStation \"{}\" was originally on line {} of {} but was repeated on line {}.".format(station, stations_seen[station], STATIONS_FILE, i))
             exit(1)
         stations_seen[station] = i
         validated_user_station_preferences.append(station)
 
     if len(validated_user_station_preferences) != len(stations_data):
-        print("Failed.\nStations that you have to add to {}:\n{}".format(stations_file, set(stations_data) - set(validated_user_station_preferences)))
+        print("Failed.\nStations that you have to add to {}:\n{}".format(STATIONS_FILE, set(stations_data) - set(validated_user_station_preferences)))
         exit(1)
 
     print("Success.")
@@ -220,8 +231,8 @@ if __name__ == "__main__":
     authenticate(session, txtemail, txtpass)
     if args.generate:
         generate_station_list(session)
-        exit(0)
-    stations_data = load_stations(session)
-    user_station_preferences = load_user_station_preferences(stations_data)
-    send_station_preferences(session, stations_data, user_station_preferences, acco)
+    else:
+        stations_data = load_stations(session)
+        user_station_preferences = load_user_station_preferences(stations_data)
+        send_station_preferences(session, stations_data, user_station_preferences, acco)
 

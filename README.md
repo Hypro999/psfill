@@ -36,7 +36,7 @@ acco: Hyderabad, Bangalore
 Mind the case though. Cities are proper nouns and should be capitalized ;)
 
 3. Now specify your preference order in the stations.txt file. For the sake of an example I've pre-populated this
-with the stations for the PS II of 2020-2021 Semester 1 as of Jun 28th, 2020, alphabetically ordered. You can generate an updated PS list by appending a command line argument to the script. To generate the list, just type in `python main.py -g`. Now you can easily reorder these to your liking (e.g. in vim you can use stuff like `d5j` to take a block of stations and thenmove them to the wherever you want. In other text editors you can select multiple lines using the shift key or your
+with the stations for the PS II of 2020-2021 Semester 1 as of Jul 3rd, 2020, alphabetically ordered. You can generate an updated PS list by appending a command line argument to the script. To generate the list, just type in `python main.py -g`. Now you can easily reorder these to your liking (e.g. in vim you can use stuff like `d5j` to take a block of stations and thenmove them to the wherever you want. In other text editors you can select multiple lines using the shift key or your
 mouse. You get the idea).
 
 4. Install the required dependencies. Since this code uses the [requests library](https://github.com/psf/requests) and

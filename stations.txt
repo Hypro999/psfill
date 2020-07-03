@@ -5,13 +5,13 @@ Chemical-Grasim Industries Ltd., Nagda
 Chemical-Indian Institute of Petroleum, Dehradun
 Chemical-SRF Ltd., Gurgaon
 Chemical-Zwende Design Tech Pvt Ltd, Bangalore
-COVIAM Technologies, Bangalore
 Electronics  -ABB Global Industries and Services Private Limited, Bangalore
 Electronics  -ALW Lighting India Pvt Ltd, Ludhiana
 Electronics  -ALW Lighting India Pvt Ltd- Nontech, Ludhiana
 Electronics  -Central Electronics Engineering Research Institute, Pilani
 Electronics  -Cisco Systems (India) Pvt. Ltd. - Hardware , Bangalore
 Electronics  -Door Sabha Nigam Ltd., Chennai
+Electronics  -Eyenetlabs, Trivandrum
 Electronics  -Hourglass Research, Mumbai
 Electronics  -Integrated Active Monitoring Pvt. Ltd. - Product & Business Dev., Pune
 Electronics  -Integrated Active Monitoring Pvt. Ltd., Pune
@@ -24,15 +24,15 @@ Electronics  -Pyrotech Electronics Pvt. Ltd., Udaipur
 Electronics  -Qzense labs Pvt. Ltd., Bangalore
 Electronics  -Samsung Semiconductor India R&D Center-Hardware, Bangalore
 Electronics  -Samsung Semiconductor India Research -Software, Bangalore
+Electronics  -Signalchip Innovations Pvt. Ltd., Bangalore
 Electronics  -Sleepiz (India) Pvt. Ltd., Pune
 Electronics  -Synopsys India Pvt. Ltd., Hyderabad
 Electronics  -Texas Instruments (I) Pvt. Ltd - Systems, Bangalore
 Electronics  -Texas Instruments (I) Pvt. Ltd. -Analog, Bangalore
 Electronics  -Xilinx India Technology Services Pvt. Ltd., Hyderabad
-Express Stores - Non tech, Gurgaon
-Express Stores - Tech, Gurgaon
-Eyenetlabs, Trivandrum
+FamPay Pvt. Ltd., Bangalore
 Finance and Mgmt-AlmaConnect, Gurgaon
+Finance and Mgmt-Altruism Solutions Pvt. Ltd, Kolkata
 Finance and Mgmt-BNY Mellon Technology, Chennai
 Finance and Mgmt-BNY Mellon Technology, Pune
 Finance and Mgmt-Bunch Microtechnologies Pvt Ltd, Noida
@@ -47,8 +47,10 @@ Finance and Mgmt-DMI Finance Private Limited , New delhi
 Finance and Mgmt-Dunzo Digital Pvt. Ltd., Bangalore
 Finance and Mgmt-Ecom Express - Business Analysis, Delhi
 Finance and Mgmt-Emptycup Innovation Pvt. Ltd. - Non tech, Bangalore
+Finance and Mgmt-Express Stores - Non tech, Gurgaon
 Finance and Mgmt-FamPay Pvt. Ltd. - Marketing, Bangalore
 Finance and Mgmt-FamPay Pvt. Ltd. - Product, Bangalore
+Finance and Mgmt-Founding Fuel, Mumbai
 Finance and Mgmt-GenY medium, Hyderabad
 Finance and Mgmt-IMarc Services, Noida
 Finance and Mgmt-IndiaBuys (Shopero Retail Technologies Pvt. Ltd.),, Hyderabad
@@ -77,6 +79,7 @@ Finance and Mgmt-JPMS GR&C Quantitative Research – Fintech, Mumbai
 Finance and Mgmt-JPMS GR&C WCS - Credit Portfolio Analytics, Mumbai
 Finance and Mgmt-JPMS GR&C Wealth Management  – Data Science – Credit Risk, Mumbai
 Finance and Mgmt-Lowe Services India Pvt.Ltd, Bangalore
+Finance and Mgmt-Matdev Investment Advisers Pvt. Ltd., Bangalore
 Finance and Mgmt-Morning Star - Index Management and Analytics, Mumbai
 Finance and Mgmt-Morningstar - Index data calculation, Mumbai
 Finance and Mgmt-Morningstar - Indexes - Data and Content, Navi mumbai
@@ -86,13 +89,16 @@ Finance and Mgmt-MSCI Index and Research, Mumbai
 Finance and Mgmt-My Smart Price - Non Tech, Hyderabad
 Finance and Mgmt-myHQ & (JustWork Technologies Pvt. Ltd.) Non Tech, New Delhi
 Finance and Mgmt-myHQ & (JustWork Technologies Pvt. Ltd.) Tech, New Delhi
+Finance and Mgmt-National Council of Applied Economic Research, New delhi
 Finance and Mgmt-News Cape Consulting, Pune
+Finance and Mgmt-Niyo Solutions Non Tech, Bangalore
 Finance and Mgmt-Nomura - Change Management Team, Mumbai
 Finance and Mgmt-Nomura - FinTech, Mumbai
 Finance and Mgmt-Nomura - Wholesale Strategy, Mumbai
 Finance and Mgmt-Nomura Global Markets, Mumbai
 Finance and Mgmt-Nomura Global Risk, Mumbai
 Finance and Mgmt-Pepper Content Pvt. Ltd., Mumbai
+Finance and Mgmt-Phone Post, Gurgaon
 Finance and Mgmt-Rupeek Fintech, Bangalore
 Finance and Mgmt-Rupifi Non Tech, Bangalore
 Finance and Mgmt-Saras Analytics - Nontech, Hyderabad
@@ -103,6 +109,7 @@ Finance and Mgmt-Spenny Pte. Ltd., Bangalore
 Finance and Mgmt-Takshila Learning Pvt. Ltd. (Non tech), Delhi
 Finance and Mgmt-Thorogood, Bangalore
 Finance and Mgmt-Trell Experiences Pvt Ltd (Non tech), Bangalore
+Finance and Mgmt-UBS  - Group Compliance , Mumbai
 Finance and Mgmt-UBS - Group Compliance, Pune
 Finance and Mgmt-UBS Business Solutions (India) Ltd. - SOX/CFOA/BCBS– Risk based control testing, Pune
 Finance and Mgmt-UBS Business Solutions (India) Private Limited - Finance Group, Mumbai
@@ -117,10 +124,12 @@ Finance and Mgmt-VCTIP Pvt. Ltd. (Market Data Forecast) Software Development, Hy
 Finance and Mgmt-Viacom 18 Media Pvt. Ltd. - Digital Ventures, Bangalore
 Finance and Mgmt-Viacom18 Media Pvt. Ltd - Corporate Strategy, Mumbai
 Finance and Mgmt-VSD Eduventures Pvt. Ltd., Gurgaon
+Finance and Mgmt-Wisemonk Services Pvt. Ltd., Bangalore
 Finance and Mgmt-Zinnov Management Consulting Pvt. Ltd.,, Bangalore
 Finance and Mgmt-Zinnov Management Consulting Pvt. Ltd.,, Gurgaon
 Finance and Mgmt-Zomentum (Pactora India Pvt Ltd) Nontech, Bangalore
 Finance and Mgmt-ZS Associates, Bangalore
+Finance and Mgmt-Zwende Design Tech Pvt Ltd, Jodhpur
 Govt Research Lab-National Chemical Laboratory, Pune
 Health Care-Ascent Health and Wellness Solutions Private Limited, Mumbai, Mumbai
 Health Care-National Centre for Biological Sciences, Bangalore
@@ -151,6 +160,7 @@ IT-Amazon Professional Services, Delhi
 IT-Apple India Pvt Limited, Hyderabad
 IT-Asanify Technologies Pvt. Ltd., Kolkata
 IT-Asteria Aerospace Pvt. Ltd., Bangalore
+IT-Aurigo Software Technologies, Bangalore
 IT-Avaamo, Bangalore
 IT-Blue Jeans Network India Pvt. Ltd., Bangalore
 IT-Blue Yonder (JDA), Bangalore
@@ -160,13 +170,17 @@ IT-Bridge Your Network Inc, Bangalore
 IT-Calypso Technology India Pvt Ltd, Mumbai
 IT-Centre for Development of Advanced Computing, Pune
 IT-Centre For Development Of Imaging Technology, Trivandrum
+IT-Cisco Systems (India) Pvt. Ltd - Software Engineering, Bangalore
 IT-Cityflo (Komorebi Tech Solutions Pvt. Ltd.), Mumbai
 IT-Classplus, Noida
 IT-ClearTax, Bangalore
 IT-COGOS Technologies Pvt Ltd., Bangalore
 IT-Couture AI, Bangalore
+IT-COVIAM Technologies, Bangalore
+IT-CriticalRiver Technologies Pvt Ltd, Hyderabad
 IT-CueMath Learn Pvt. Ltd, Bangalore
 IT-Curious Bee Innovations Pvt. Ltd. (Askation), Bangalore
+IT-DemandMatrix, Pune
 IT-Dreamplug Technologies, Bangalore
 IT-Eatgood Technologies Pvt Ltd, Bangalore
 IT-Ecom Express Pvt. Ltd. - Data Science, New delhi
@@ -174,6 +188,7 @@ IT-eGovernments Foundation, Bangalore
 IT-Emptycup Innovation Pvt. Ltd. - Tech (Nedo Software), Bangalore
 IT-Energy Exemplar, Pune
 IT-Everwell Health Solution, Bangalore
+IT-Express Stores - Tech, Gurgaon
 IT-FamPay Pvt. Ltd. - IT, Bangalore
 IT-Goscale Technologies Pvt. Ltd. - IT, Bangalore
 IT-Groww - Software Development, Bangalore
@@ -181,15 +196,18 @@ IT-HealthRx by Bajaj Finserv Health Ltd., Pune
 IT-Heraizen Technologies Pvt Ltd, Bangalore
 IT-i-exceed Technology Solutions, Bangalore
 IT-Jupiter, Mumbai
+IT-Keysight Technologies India Pvt. Ltd., Kolkata
 IT-Kristal.AI, Bangalore
 IT-LOGIQ LABS Pvt Ltd ( eShipz.com ), Bangalore
 IT-MBB Labs Pvt. Ltd., Bangalore
+IT-MedCords - Nontech, Kota
 IT-Merilytics, Hyderabad
 IT-MiQ Digital India Pvt. Ltd., Bangalore
 IT-Mobileum, Bangalore
 IT-Molde Analytics India Pvt. Ltd., Hyderabad
 IT-Morgan Stanley Advantage Services, Mumbai
 IT-NetApp, Bangalore
+IT-Niyo Solutions, Bangalore
 IT-Nobroker, Bangalore
 IT-Nucleus Software Export Ltd, Noida
 IT-Nvidia Graphics -Software, Bangalore
@@ -204,10 +222,13 @@ IT-Pixxel (Syzygy Space Technologies Pvt. Ltd.), Bangalore
 IT-Praktice.ai, Bangalore
 IT-Psi Phi Global Solutions Pvt. Ltd., (OkCredit), Bangalore
 IT-Qubole, Bangalore
+IT-ReferralYogi Technologies Pvt. Ltd., Chennai
 IT-Reflexis Systems India Pvt Ltd., Pune
 IT-Rupifi Tech, Bangalore
+IT-Samyojya, Bangalore
 IT-SAP Labs, Bangalore
 IT-Saras Analytics - Tech, Hyderabad
+IT-SENSEI TECHNOLOGIES PVT LTD, Bangalore
 IT-SequelOne Solutions Pvt Ltd, Gurgaon
 IT-ShortHills Tech Pvt. Ltd, Gurgaon
 IT-SmartHelio Sarl., NOIDA
@@ -223,16 +244,20 @@ IT-Trifacta Inc, Bangalore
 IT-UPGRAD, Mumbai
 IT-UST Global- Trivandrum, Trivandrum
 IT-VMware Software India Pvt. Ltd., Bangalore
+IT-Wavelabs Technologies, Hyderabad
 IT-Western Digital (SANDISK), Bangalore
 IT-Yulu Bike, Bangalore
+IT-Zaggle Prepaid Ocean Services Pvt. Ltd, Hyderabad
 IT-Zeotap India Pvt. Ltd., Bangalore
 IT-Zinnov Management Consulting Pvt. Ltd (IT Project), Bangalore
 IT-Zomentum (Pactora India Pvt Ltd), Bangalore
+IT-Zwende Design Tech Pvt Ltd - Nontech, Bangalore
 Kubric, Bangalore
 Lemnisk Pvt. Ltd., Bangalore
 Mechanical-Adani Power, Ahmedabad
 Mechanical-Aditya Birla Insulators, Halol
 Mechanical-ASA Industries, Noida
+Mechanical-ASCO Numatics India Pvt. Ltd. (Emerson Automation Solutions), Chennai
 Mechanical-Bharat Forge Ltd, Pune
 Mechanical-Divgi TorqTransfer Systems Pvt. Ltd, Shivare, Pune
 Mechanical-Divgi TorqTransfer Systems Pvt. Ltd. - Bhosari, Pune
@@ -243,8 +268,9 @@ Mechanical-NBC Bearings, Jaipur
 Mechanical-Tega Industries, Kolkata
 Mechanical-Texmaco Rail & Engineering Ltd., Kolkata
 Mechanical-Time Tooth, Noida
-MedCords - Nontech, Kota
+Mechanical-Weir Minerals India Pvt Ltd, Bangalore
 MedCords, Kota
+Others-Class 21A Pvt. Ltd., Gurgaon
 Others-Filmboard Movies Pvt. Ltd., Mumbai
 Others-Give Foundation, Bangalore
 Others-Kerala Infrastructure and Technogy for Education, Trivandrum
@@ -252,7 +278,4 @@ Others-My smart price - Tech, Hyderabad
 Others-National Institute of Science and Tech. Dev. Studies (NISTADS), New delhi
 Others-Pilani AtmaNirbhar Resource Center (PARC), Pilani
 Others-VCTIP Pvt. Ltd. (Market Data Forecast) Research Associate, Hyderabad
-ReferralYogi Technologies Pvt. Ltd., Chennai
-Samyojya, Bangalore
-Weir Minerals India Pvt Ltd, Bangalore
-Zaggle Prepaid Ocean Services Pvt. Ltd, Hyderabad
+UBS - Group Finance, Hyderabad
