@@ -123,16 +123,17 @@ def load_stations(session: requests.Session) -> Dict[str, Any]:
     print("Success.")
     return stations_data
 
-def generate_station_list(session: requests.Session) ->None: 
+def generate_station_list(session: requests.Session, auto_override: bool) ->None:
     output_filename = STATIONS_FILE
-    while os.path.exists(output_filename):
-        opt = "c"
-        while opt not in ["y", "n"]:
-            opt = input("The file {} already exists. Overwrite (y/n)? ".format(output_filename))
-        if opt == "y":
-            output_filename = input("Then what file do you want to write to? ")
-        elif opt == "n":
-            exit(0)
+    if not auto_override:
+        while os.path.exists(output_filename):
+            opt = "c"
+            while opt not in ["y", "n"]:
+                opt = input("The file {} already exists. Overwrite (y/n)? ".format(output_filename))
+            if opt == "y":
+                break
+            elif opt == "n":
+                output_filename = input("Then what file do you want to write to? ")
 
     print("Generating the updated PS list... ",end = "", flush = True)
     stations_data_endpoint = url("/Student/StudentStationPreference.aspx/getinfoStation")
@@ -224,13 +225,14 @@ def send_station_preferences(session: requests.Session, stations_data: Dict[str,
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-g","--generate",help = "generate new station list",action = "store_true")
+    parser.add_argument("-g","--generate", help = "generate new station list", action = "store_true")
+    parser.add_argument("-y","--yes", help = "When used with -g it means that the stations file should be overwritten if exists (don't prompt).", action = "store_true")
     args = parser.parse_args()
     session = requests.Session()
     txtemail, txtpass, acco = load_user_credentials()
     authenticate(session, txtemail, txtpass)
     if args.generate:
-        generate_station_list(session)
+        generate_station_list(session, args.yes)
     else:
         stations_data = load_stations(session)
         user_station_preferences = load_user_station_preferences(stations_data)
